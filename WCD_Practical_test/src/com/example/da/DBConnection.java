@@ -12,7 +12,7 @@ public class DBConnection {
         if(connection==null)
         {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/t1907m_practical","root","");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/fdata","root","");
         }
         return connection;
     }
