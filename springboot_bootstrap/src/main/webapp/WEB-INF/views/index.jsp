@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
-    <link type="text/css" rel="stylesheet" href="${contextPath}/webjars/bootstrap/4.3.1/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="<c:url value="assets/bootstrap.css"/> ">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">

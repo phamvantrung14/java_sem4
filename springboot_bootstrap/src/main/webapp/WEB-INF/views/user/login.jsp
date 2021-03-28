@@ -7,7 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
-    <link rel="stylesheet" href="${contextPath}/webjars/bootstrap/4.3.1/css/bootstrap.css">
+<%--    <link rel="stylesheet" href="${contextPath}/webjars/bootstrap/4.3.1/css/bootstrap.css">--%>
+    <link rel="stylesheet" href="<c:url value="webjars/bootstrap/4.3.1/css/bootstrap.css"/>">
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
