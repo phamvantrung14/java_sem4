@@ -22,6 +22,5 @@ public class Locations {
     @OneToMany(mappedBy = "locations")
     private List<Departments> departmentsList;
 
-    @OneToMany(mappedBy = "locations")
-    private List<Warehouses> warehousesList;
+
 }

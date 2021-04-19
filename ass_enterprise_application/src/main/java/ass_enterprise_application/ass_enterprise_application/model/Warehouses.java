@@ -13,9 +13,10 @@ public class Warehouses {
     private String warehouse_name;
     private String wh_geo_location;
 
-    @ManyToOne
-    @JoinColumn(name = "location_id",referencedColumnName = "location_id")
+    @OneToOne
+    @JoinColumn(name = "location_id")
     private Locations locations;
+
     @OneToMany(mappedBy = "warehouses")
     private List<Inventories>inventoriesList;
 }
