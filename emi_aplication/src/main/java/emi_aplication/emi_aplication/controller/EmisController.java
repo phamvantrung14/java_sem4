@@ -46,6 +46,7 @@ public class EmisController {
     public String saveEmi(@ModelAttribute("emiNew")Emi emi)
     {
         emi.setStatus("active");
+        emi.setEmi_total(emiAmount(emi.getLoan_amount(),emi.getRate_of_interest(),emi.getRate_of_interest()));
         boolean bl = emiService.saveEmi(emi);
         if (bl)
         {
@@ -59,5 +60,13 @@ public class EmisController {
     {
 
         return "";
+    }
+
+    public double emiAmount(double l,double r, double n)
+    {
+        double total = 0;
+        total = l*r/12*((l+r)*n/(l+r)*n-1);
+
+        return total;
     }
 }

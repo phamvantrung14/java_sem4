@@ -34,7 +34,7 @@
                     <th>Team of the loan</th>
                     <th>Status</th>
                     <th>Time End</th>
-                    <th>Created</th>
+                    <th>EMI amout</th>
                     <th>CRUD</th>
                 </tr>
                 </thead>
@@ -47,7 +47,7 @@
                         <td>${emi.team_of_the_loan}</td>
                         <td>${emi.status}</td>
                         <td>${emi.timeEnd}</td>
-                        <td>${emi.created}</td>
+                        <td>${emi.emi_total}</td>
                         <td>
                             <a class="btn btn-primary" href="<%=request.getContextPath()%>/emi/detail?id=${emi.emi_id}">Detail</a>
                         </td>
