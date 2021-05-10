@@ -22,30 +22,34 @@
 <br>
 <br>
 <div class="container">
-    <a class="btn btn-success" href="<%=request.getContextPath()%>/emi/">Create new emi</a><br>
+    <a class="btn btn-success" href="<%=request.getContextPath()%>/">Back</a><br>
     <div class="col-md-12 col-md-offset-0 mt-2">
         <div class="row ">
             <table class="table table-active">
                 <thead class="thead-dark">
                 <tr>
                     <th>Name</th>
-                    <th>Address</th>
-                    <th>Phone</th>
-                    <th>CCCD</th>
-                    <th>Amount</th>
+                    <th>Loan Amout</th>
+                    <th>Rate of interest</th>
+                    <th>Team of the loan</th>
+                    <th>Status</th>
+                    <th>Time End</th>
+                    <th>Created</th>
                     <th>CRUD</th>
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${list}" var="user">
+                <c:forEach items="${listEmi}" var="emi">
                     <tr>
-                        <td>${user.fullName}</td>
-                        <td>${user.address}</td>
-                        <td>${user.phoneNumber}</td>
-                        <td>${user.CCCD}</td>
-                        <td>${user.amount}</td>
+                        <td>${emi.customer.fullName}</td>
+                        <td>${emi.loan_amount}</td>
+                        <td>${emi.rate_of_interest}</td>
+                        <td>${emi.team_of_the_loan}</td>
+                        <td>${emi.status}</td>
+                        <td>${emi.timeEnd}</td>
+                        <td>${emi.created}</td>
                         <td>
-                            <a class="btn btn-primary" href="<%=request.getContextPath()%>/emi?id=${user.cust_id}">Emi</a>
+                            <a class="btn btn-primary" href="<%=request.getContextPath()%>/emi/detail?id=${emi.emi_id}">Detail</a>
                         </td>
                     </tr>
                 </c:forEach>
@@ -55,18 +59,8 @@
         </div>
 
     </div>
-    <a class="btn btn-success" href="<%=request.getContextPath()%>/add">Create new customer</a>
 </div>
-<script type="text/javascript" src="<c:url value="webjars/jquery/1.9.1/jquery.min.js"/> "></script>
-<script>
-    $(function () {
-        <c:if test="${param.success != null}">
-        alert('${param.success}');
-        </c:if>
-        <c:if test="${param.error != null}">
-        alert('${param.error}');
-        </c:if>
-    })
-</script>
+
+
 </body>
 </html>

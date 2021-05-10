@@ -28,7 +28,6 @@
             <%--@elvariable id="emiNew" type=""--%>
             <form:form action="${pageContext.request.contextPath}/emi/saveEmi" method="post" modelAttribute="emiNew">
                 <div class="form-group">
-
                     <form:select class="custom-select" path="customer.cust_id">
                         <form:options items="${listCust}"  itemLabel="fullName" itemValue="cust_id" />
                     </form:select>
@@ -44,6 +43,10 @@
                 <div class="form-group">
                     <label > rate of interest :</label>
                     <form:input type="number" class="form-control" path="rate_of_interest" placeholder="Enter rate of interest" autofocus="autofocus"/>
+                </div>
+                <div class="form-group">
+                    <label > time end :</label>
+                    <form:input type="date" class="form-control" path="timeEnd" placeholder="Enter rate of interest" autofocus="autofocus"/>
                 </div>
                 <div class="form-group">
                     <label > team of the loan :</label>

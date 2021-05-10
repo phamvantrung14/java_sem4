@@ -15,6 +15,7 @@ public class Emi {
     private double team_of_the_loan;
     private double emi_total;
     private String status;
+    private Date timeEnd;
     private Date created;
     private Date updated;
 
@@ -114,5 +115,13 @@ public class Emi {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Date getTimeEnd() {
+        return timeEnd;
+    }
+
+    public void setTimeEnd(Date timeEnd) {
+        this.timeEnd = timeEnd;
     }
 }
