@@ -16,18 +16,12 @@ public class Library {
     private String name;
 
     @OneToMany(mappedBy = "library", cascade = CascadeType.ALL)
-    private Set<Book> books = new HashSet<>();
-
-    public Set<Book> getBooks() {
-        return books;
+    private Set<Book> books(){
+     return this.books();
     }
 
-    public void setBooks(Set<Book> books) {
-        this.books = books;
-        for(Book b : books){
-            b.setLibrary(this);
-        }
-    }
+
+
 
     public int getId() {
         return id;

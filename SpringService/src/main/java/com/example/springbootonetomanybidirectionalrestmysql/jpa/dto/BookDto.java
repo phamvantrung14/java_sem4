@@ -1,23 +1,10 @@
-package com.example.springbootonetomanybidirectionalrestmysql.jpa;
+package com.example.springbootonetomanybidirectionalrestmysql.jpa.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
+import com.example.springbootonetomanybidirectionalrestmysql.jpa.Library;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-
-//@Data
-@Entity
-public class Book {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class BookDto {
     private int id;
-    @NotNull
     private String name;
-
-    @ManyToOne
-    @JoinColumn(name = "library_id",referencedColumnName = "id")
-    //@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Library library;
 
     public int getId() {

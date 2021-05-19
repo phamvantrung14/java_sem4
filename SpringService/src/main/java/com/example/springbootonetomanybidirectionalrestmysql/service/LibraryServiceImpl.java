@@ -12,7 +12,6 @@ public class LibraryServiceImpl implements LibraryService {
     @Autowired
     private LibraryRepository libraryRepository;
 
-
     @Override
     public List<Library> listLibrary() {
         try{
