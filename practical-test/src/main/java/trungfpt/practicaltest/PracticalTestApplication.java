@@ -1,4 +1,4 @@
-package com.example.springbootonetomanybidirectionalrestmysql;
+package trungfpt.practicaltest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,18 +11,19 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-public class SpringbootOnetomanyBidirectionalRestMysqlApplication {
+public class PracticalTestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootOnetomanyBidirectionalRestMysqlApplication.class, args);
+        SpringApplication.run(PracticalTestApplication.class, args);
     }
     @Bean
     public Docket docket()
     {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.springbootonetomanybidirectionalrestmysql"))
+                .apis(RequestHandlerSelectors.basePackage("trungfpt.practicaltest"))
                 .paths(PathSelectors.any())
                 .build();
     }
+
 }
